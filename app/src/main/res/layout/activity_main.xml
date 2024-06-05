@@ -35,7 +35,7 @@
         android:id="@+id/buttonFunctionality"
         android:layout_width="245dp"
         android:layout_height="73dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="72dp"
         android:text="C'est parti"
         android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"

@@ -43,4 +43,22 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="clients">Clients</string>
+    <string name="partenaire">PARTENAIRE</string>
+    <string name="entrez_votre_nom">Entrez votre nom</string>
+    <string name="rechercher">Rechercher</string>
+    <string name="nom">Nom :</string>
+    <string name="poste">Poste :</string>
+    <string name="adresse">Adresse :</string>
+    <string name="ville">Ville :</string>
+    <string name="email">Email :</string>
+    <string name="t_l_phone">Téléphone :</string>
+    <string name="pr_c_dent">Précédent</string>
+    <string name="suivant">Suivant</string>
+    <string name="gauche">Gauche</string>
+    <string name="saisissez_un_nom_de_partenaire">Saisissez un nom de partenaire</string>
+    <string name="saisissez_un_nom_de_client">Saisissez un nom de client</string>
+    <string name="client">Client</string>
+    <string name="fournisseur">Fournisseur</string>
+    <string name="saisissez_un_nom_de_fournisseur">saisissez_un_nom_de_fournisseur</string>
 </resources>

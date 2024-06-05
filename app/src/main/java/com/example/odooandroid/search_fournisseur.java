@@ -18,7 +18,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class search extends Activity {
+public class search_fournisseur extends Activity {
     private JSONArray jArray;
     private JSONObject json_data;
     private int i = 0;
@@ -26,7 +26,7 @@ public class search extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.search);
+        setContentView(R.layout.search_fournisseur);
 
         EditText rech = findViewById(R.id.rech);
         Button left_button = findViewById(R.id.left_button);
@@ -35,7 +35,7 @@ public class search extends Activity {
         findViewById(R.id.button).setOnClickListener(view -> {
 
             try {
-                String adresse = "http://192.168.92.1:81/test/partenaire.php?rech=" + rech.getText().toString();
+                String adresse = "http://192.168.92.1:81/test/fournisseur.php?rech=" + rech.getText().toString();
                 String response = new HTTPRequest.HTTPSELECTRequest().execute(adresse).get();
                 Log.d("OdooAndroid", "Réponse : " + response); // Journaliser la réponse pour le débogage
 
@@ -62,7 +62,7 @@ public class search extends Activity {
         // ... (code pour les boutons précédent et suivant)
         findViewById(R.id.button2).setOnClickListener(view -> {
             try {
-                if(i>0) {
+                if (i > 0) {
                     i--;
                     json_data = jArray.getJSONObject(i);
                     ((TextView) findViewById(R.id.name)).setText(json_data.getString("name"));
@@ -78,7 +78,7 @@ public class search extends Activity {
         });
         findViewById(R.id.button3).setOnClickListener(view -> {
             try {
-                if(i<jArray.length()-1) {
+                if (i < jArray.length() - 1) {
                     i++;
                     json_data = jArray.getJSONObject(i);
                     ((TextView) findViewById(R.id.name)).setText(json_data.getString("name"));
@@ -99,18 +99,19 @@ public class search extends Activity {
             public void onClick(View v) {
                 // Code à exécuter lorsque le bouton est cliqué
                 // Par exemple, vous pouvez ouvrir une nouvelle activité, afficher un message, etc.
-                Intent acceder_client1 = new Intent(getApplicationContext(), search_client.class);
-                startActivity(acceder_client1);
+                Intent acceder_partenaire2 = new Intent(getApplicationContext(), search.class);
+                startActivity(acceder_partenaire2);
                 finish();
             }
         });
         left_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent acceder_fournisseur1 = new Intent(getApplicationContext(), search_fournisseur.class);
-                startActivity(acceder_fournisseur1);
+                Intent acceder_client2 = new Intent(getApplicationContext(), search_client.class);
+                startActivity(acceder_client2);
                 finish();
             }
         });
     }
 }
+

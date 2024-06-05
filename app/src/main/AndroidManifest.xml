@@ -15,7 +15,12 @@
         android:theme="@style/Theme.OdooAndroid"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-
+        <activity
+            android:name=".search_fournisseur"
+            android:exported="false" />
+        <activity
+            android:name=".search_client"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
